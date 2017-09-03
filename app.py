@@ -21,7 +21,7 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
     self.end_headers()
 
     # Send message back to client
-    message = "Started at {}".format(start_time)
+    message = "Started at {}\n".format(start_time)
     # Write content as utf-8 data
     self.wfile.write(bytes(message, "utf8"))
     return
