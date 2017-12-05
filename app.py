@@ -2,6 +2,7 @@
 
 from datetime import datetime
 from http.server import BaseHTTPRequestHandler, HTTPServer
+import time
 
 # get the server start time
 start_time = str(datetime.now())
@@ -12,6 +13,8 @@ class testHTTPServer_RequestHandler(BaseHTTPRequestHandler):
   # GET
   def do_GET(self):
     global start_time
+    
+    time.sleep(3 * 60)
 
     # Send response status code
     self.send_response(200)
